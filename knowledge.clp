@@ -500,3 +500,81 @@
     =>
     (assert (ui-request (type result) (id r_goblin) (options reset)))
 )
+(defrule res-lizardfolk
+    (user-answer (question-id q_scales-kind) (value opt_reptile))
+    =>
+    (assert (ui-request (type result) (id r_lizardfolk) (options reset)))
+)
+
+(defrule res-yuan-ti
+    (or (user-answer (question-id q_conquer) (value opt_deception))
+        (user-answer (question-id q_scales_kind) (value opt_snek))
+    )
+    =>
+    (assert (ui-request (type result) (id r_yuan_ti) (options reset)))
+)
+
+(defrule ask-surprise
+    (user-answer (question-id q_power) (value opt_power_strength))
+    =>
+    (assert (ui-request (type question) (id q_surprise) (options opt_head_on opt_ambush)))
+)
+
+(defrule reach-orc
+    (or (user-answer (question-id q_surprise) (value opt_head_on))
+        (user-answer (question-id q_small) (value yes))
+    )
+    =>
+    (assert (ui-request (type question) (id q_orc_choice) (options yes opt_stoopid)))
+)
+
+(defrule res-orc
+    (user-answer (question-id q_orc_choice) (value yes))
+    =>
+    (assert (ui-request (type result) (id r_orc) (options reset)))
+)
+
+(defrule ask-weird
+    (user-answer (question-id q_animal_person) (value opt_gross))
+    =>
+    (assert (ui-request (type question) (id q_weird) (options opt_familiar opt_f_you)))
+)
+
+(defrule ask-uncommon
+    (or (user-answer (question-id q_weird) (value opt_familiar))
+        (user-answer (question-id q_less_classic) (value opt_move))
+    )
+    =>
+    (assert (ui-request (type question) (id q_uncommon) (options opt_god opt_aquaman opt_robot opt_doppel)))
+    
+)
+
+(defrule res-changelings
+    (user-answer (question-id q_uncommon) (value opt_doppel))
+    =>
+    (assert (ui-request (type result) (id r_changelings) (options reset)))
+)
+
+(defrule res-warforged
+    (user-answer (question-id q_uncommon) (value opt_robot))
+    =>
+    (assert (ui-request (type result) (id r_warforged) (options reset)))
+)
+
+(defrule res-triton
+    (user-answer (question-id q_uncommon) (value opt_aquaman))
+    =>
+    (assert (ui-request (type result) (id r_triton) (options reset)))
+)
+
+(defrule res-aasimar
+    (user-answer (question-id q_uncommon) (value opt_god))
+    =>
+    (assert (ui-request (type result) (id r_aasimar) (options reset)))
+)
+
+(defrule res-banned
+    (user-answer (question-id q_weird) (value opt_f_you))
+    =>
+    (assert (ui-request (type result) (id r_banned) (options reset)))
+)
