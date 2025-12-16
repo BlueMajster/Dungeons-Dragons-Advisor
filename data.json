@@ -1,0 +1,436 @@
+{
+    "questions": {
+        "q_game": "Yay! Why do you wanna play High Adventure Pop Fantasy?",
+        "q_nodnd": "You don't wanna play D&D, you want to play something else",
+        "q_hero": "Every hero is special. What makes you special?",
+        "q_fantasy": "Sure, I like the classic fantasy races anyways",
+        "q_special": "Ugh, FINE. What makes you so damn special then?",
+        "q_tiny": "Nice! Wanna be human sized or tiny?",
+        "q_silly": "Alright, are you only a bit silly or extremely silly?",
+        "q_dwarfy": "Not done yet. Want to be slightly dwarfy, or nimble?",
+        "q_tinker": "You can be a woodsy trickster or steampunk tinkerer",
+        "q_halfling_choice": "Halfling?",
+        "q_gnome_choice": "Gnome?",
+        "q_mountain_gnome_choice": "Mountain Gnome?",
+
+        "q_stronk": "...Sure. More of the Gentle Nature Giant or STRONK MEN",
+        "q_less_classic": "Sure, but we're getting less classic now.",
+        "q_pretty": "Lithe 'n' Pretty, or Short 'n' Swole?",
+        "q_hills": "So, are you hardier like the hills, or stronger like stone?",
+        "q_nature": "Wait, now it gets complicated. Is magic or nature more important to you?",
+        "q_problem": "What? Fine. What's the problem?",
+        "q_elf_choice": "Elf?",
+        "q_dwarf_choice": "Dwarf?",
+
+        "q_drow_choice": "Drow?",
+        "q_human_choice": "PREPARE TO BE A HUMAN, HUMAN.",
+        "q_ugh": "Ugh, what is it",
+        "q_monster_pretty": "Alright. Are you half monstrous or half magical and pretty?",
+
+        "q_dark": "Seriously, you could just like, be a dark and brooding white dude",
+        "q_dragon": "You can't be a dragon.",
+        "q_animal_person": "Wow, That's helpful. Is Animal Person weird enough for you?",
+        "q_dragonborn": "FINE PICK YOUR FAVOURITE COLOUR",
+        "q_furry": "Are you a furry?",
+        "q_monstrous": "Okay, well we got options. First off, are you actually kind of monstrous or just misunderstood?",
+        "q_close": "Close enough",
+        "q_fursona": "*sigh* WHAT'S YOUR FURSONA?",
+        "q_bird": "Majestic Eagle or Obnoxious Corvid?",
+        "q_misunderstood": "Alright, why do people misunderstand you?",
+        "q_comic": "Great! First off, how do you feel about comic relief?",
+        "q_scales": "Fun-sized evil it is. How do you feel about Scales?",
+        "q_power":"Right. Sorry. What is power to you?",
+        "q_scales_kind":"Like Ted Cruz. Neat. So what kind of scales we talking about?",
+        "q_surprise":"Surprise attacks, or face the enemy head on because you're not a coward",
+        "q_conquer":"But a bit of strength is needed too right? To conquer?",
+        "q_weird":"Are you just looking for weird for weird's sake at this point?",
+        "q_uncommon":"Uncommon Races! What sounds appealing to you?",
+        "q_genie":"Ugh fine. One of your parents is a genie",
+        "q_psionic":"Seriously? How about multiverse dwelling psionic plane hoppers?",
+        "q_vulcan":"Blue hairless vulcan perfectionists? Like, this isn't even DnD anymore",
+        "q_experiment":"OKAY YOU HAVE TENTACLES AND MUTATIONS AND YOU'RE LITERALLY A MAD SCIENCE EXPERIMENT",
+        "q_element":"Genies are elemental, so pick an element",
+        "q_flavour":"Not quite. Anyways Gith come in two flavours",
+        "q_allway":"Yup! Do you want to go part of the way, or all the way",
+        "q_angel":"More choices! What kind of angel?",
+        "q_small":"Small version?",
+
+        "q_dragonborn_choice": "Dragonborn?",
+        "q_orc_choice": "Orc?",
+        "q_aasimar_choice": "Aasimar?",
+        "q_triton_choice": "Triton?",
+        "q_genasi_choice": "Genasi?",
+        "q_gith_choice": "Gith?",
+        "q_kalashtar_choice": "Kalashtar?"
+    },
+    "answers": {
+        "yes": "Yes",
+        "no": "No",
+        "opt_adventure": "I wanna go on adventures!",
+        "opt_lotr": "Can I be someone from Lord of the Rings?",
+        "opt_snowflake": "I want to be a special snowflake",
+        "opt_rpg_thing": "I don't like fantasy, I just wanna do this RPG thing",
+        "opt_vampire": "Elves are dumb, lets by vampires n shit",
+        "opt_elf": "Uh, I'm an elf or something?",
+        "opt_serious": "What's on the inside. And my sword. And my magic.",
+        "opt_mee": "Me too!",
+        "opt_tolkein": "Actually Tolkein is a hack. Gimme something DIFFERENT",
+        "opt_kid": "Kid-sized please!",
+        "opt_pedo": "I ain't no pedo",
+        "opt_big": "...is there a Big Size?",
+        "opt_dark_humor": "Can i have a bit of dark humor?",
+        "opt_magic": "EVERYTHING IS MAGIC AND GLITTER",
+        "opt_gravitas": "I would like to maintain some semblance of gravitas",
+        "opt_magic_hobbit": "...is this just a magic hobbit?",
+        "opt_off_hobbit": "Cool, off-brand Hobbit",
+        "opt_hardy": "Make me hardy",
+        "opt_nimble": "Make me nimble",
+        "opt_mushroom": "I AM A MAGIC MUSHROOM",
+        "opt_toys": "LETS MAKE TOYS",
+        "opt_deeper": "FORGET THE TOYS, WE MUST GO DEEPER",
+
+        "opt_muscle": "POOMP DE MOOSCLES",
+        "opt_gentl": "Pls be gentl",
+        "opt_giant": "Can I be a Giant?",
+        "opt_move": "No problem, lets move over here",
+        "opt_dlike": "Uh, I don't like these options",
+        "opt_short": "Wait, I dont want to be short",
+        "opt_lift": "Do u even lift bro?",
+        "opt_pretty": "I feel pretty",
+        "opt_done": "Yay I'm done!",
+        "opt_mother_magic": "Motherfucker I'm MADE of Magic",
+        "opt_wood": "Elves are and always will be badass treehuggers",
+        "opt_nright": "Wait, none of this is right",
+        "opt_drink": "By Thorin's beard, time to drink ale and axe things!",
+        "opt_hilly": "Hardy n Hilly!",
+        "opt_stone": "Stone is Strength!",
+        "opt_asshole": "Neither, I'm angry and kind of an asshole",
+
+        "opt_feary": "Aren't Elves Faeries? Make me goddamn weird and Fey",
+        "opt_merm": "When I said Elf I meant like, Mermaids",
+        "opt_half": "Can I be only KIND OF Elf-y",
+        "opt_dark_brood": "I wanted to be Dark and Brooding",
+        "opt_brooding": "I SAID DARK AND BROODING",
+
+        "opt_wait": "WAAAAIIIIIIT",
+        "opt_lame": "100% human is lame. Can I be part fantasy?",
+        "opt_magic_pretty": "Yeah. I still wanna be magical and pretty",
+        "opt_monster_blood": "Nah, give me some monster blood!",
+
+        "opt_dark": "I'm DARK and MISUNDERSTOOD and there's no true RIGHT or WRONG.",
+        "opt_dragon": "I want to be a MOTHERFUCKING DRAGON",
+        "opt_dunno": "Uh, I dunno, just make me not an elf, dwarf, angel, devil or something done 100 times before okay?",
+        "opt_darkness": "No, I wear the darkness on my sleeve for all the world to see",
+        "opt_right": "Yeah, I guess you're right!",
+        "opt_its_dnd": "It's called Dungeons & Dragons you wangrod",
+        "opt_furry": "Uh, like a furry?",
+        "opt_gross": "Gross no, I said SPECIAL",
+        "opt_yay": "YAY",
+        "opt_kid_sized": "Wait does this come kid-sized?",
+        "opt_not_dragon": "This isn't a dragon",
+        "opt_lemme_dragon": "Noooooo lemme be a Dragon!",
+        "opt_fine": "Okay Fine",
+        "opt_scalie": "Actually I'm a Scalie",
+        "opt_horse_thing": "Actually more of a horse thing for me",
+        "opt_bird": "No but birds are cool",
+        "opt_owo": "OwO",
+        "opt_noone_get": "No one gets me, especially my Mom",
+        "opt_monster": "You know what, I was the monster all along",
+        "opt_furry_meow": "Cat! Meow!",
+        "opt_furry_moo": "Cow! Moo!",
+        "opt_furry_elephant": "Elephant.. Uhh...",
+        "opt_furry_none": "...none of the others?",
+        "opt_air": "I just wanna soar in the air majestic and free",
+        "opt_caw": "CAW CAW MOTHERFUCKA",
+        "opt_slaughter": "Can't spell Slaughter without Laughter",
+        "opt_funny": "Do you think this is funny?",
+        "opt_poncy": "I'm the DARK AND BADASS version of some poncy elf, dwarf, or other wussy fantasy goody two shoes",
+        "opt_parent": "One of my parents is from a species that is thought to be brutish and cruel",
+        "opt_devil": "I've got sinister horns and look like the devil",
+        "opt_lizard": "I am actually an emotionless lizard person",
+        "opt_power_strength": "Strength",
+        "opt_power_intellect": "Intellect",
+        "opt_reptile": "I dunno just general reptiles I guess",
+        "opt_snek": "Snek",
+        "opt_mf_dragon": "A MOTHERFUCKING DRAGON",
+        "opt_head_on": "Face them head on, I'm no coward!",
+        "opt_ambush": "Ambushes aren't cowardly, I'm just lazy",
+        "opt_deception": "Deception is the ultimate weapon",
+        "opt_mind": "Tactical prowess marks a keen mind",
+        "opt_stoopid": "Wait, what's this intelligence penalty? I don't want to be stupid, can I backpedal a bit and be a bit more heroic?",
+        "opt_familiar": "..you're right Let's stick to something at least a bit familiar",
+        "opt_f_you": "Yeah. Fuck you",
+        "opt_works": "Yeah that works",
+        "opt_smith": "Genies? Get that Will Smith shit out of my face",
+        "opt_captain": "Let's Captain Planet this shit",
+        "opt_fire": "Well, there is only one REAL choice...",
+        "opt_earth": "Rock hard baby",
+        "opt_float": "We all float down here",
+        "opt_aqua": "Actually I wanted to be Aquaman",
+        "opt_out_there": "Okay, that's pretty fucking out there",
+        "opt_ugly_elf": "That's just ugly elves with mind powers",
+        "opt_explode": "Alright so I can explode heads with my mind right?",
+        "opt_immortal": "WE ARE IMMORTAL WE ARE CONQUERERS WE ARE GITH",
+        "opt_zen": "Zen as fuck Kung Fu as fuck Forge Chaos into Reality",
+        "opt_got_me": "Fine you got me.",
+        "opt_space": "Vulcans are just space elves. These fuckers are just milktoast af",
+        "opt_hybrid": "This is the shit I'm talking about",
+        "opt_mysterious": "No I want to be mysterious",
+        "opt_idk": "..I don't know what this is",
+        "opt_animal": "Can I be an animal person?",
+        "opt_classy_monster": "Can I be a classic Monster?",
+        "opt_doppel": "...can I be a doppelganger?",
+        "opt_robot": "Beep Boop Bop I am Robot",
+        "opt_aquaman": "Basically Aquaman is the best DC superhero",
+        "opt_god": "We're on a mission from God",
+        "opt_touch": "Uh, just give me a touch, just enough to make it nuanced",
+        "opt_full_monster": "Oh, let's go 100% monster",
+        "opt_f_tief": "Fuck off Tieflings!",
+        "opt_bad_angel": "Oh I wanna be an angel but not like goody two shoes, A BAD ANGEL",
+        "opt_lord": "And you will know My name is the Lord when I lay My vengeance upon thee",
+        "opt_light": "You know, light, goodness, yadda yadda",
+        "opt_elfy": "Wait, can I do this but more Elf-y?"
+    },
+    "results": {
+        "r_vampire": {
+                "title": "DIFFERENT GAME",
+                "desc": "And now we are playing Vampyre, I hope you are happy"
+        },
+        "r_human": {
+            "title": "HUMAN",
+            "desc": "PHB"
+        },
+        "r_gnome": {
+            "title": "GNOME",
+            "desc": "PHB"
+        },
+        "r_halfling": {
+            "title": "HALFLING",
+            "desc": "PHB"
+        },
+        "r_forest_gnome": {
+            "title": "FOREST GNOME",
+            "desc": "Gnome Subrace"
+        },
+        "r_mountain_gnome": {
+            "title": "MOUNTAIN GNOME",
+            "desc": "Gnome Subrace"
+        },
+        "r_deep_gnome": {
+            "title": "DEEP GNOME",
+            "desc": "Gnome Subrace"
+        },
+        "r_lightfoot": {
+            "title": "LIGHTFOOT",
+            "desc": "Halfling Subrace"
+        },
+        "r_stout": {
+            "title": "STOUT",
+            "desc": "Halfling Subrace"
+        },
+
+
+        "r_goliath": {
+            "title": "GOLIATH",
+            "desc": "Volos"
+        },
+        "r_firbolg": {
+            "title": "FIRBOLG",
+            "desc": "Volos"
+        },
+        "r_dwarf": {
+            "title": "DWARF",
+            "desc": "PHB"
+        },
+        "r_elf": {
+            "title": "ELF",
+            "desc": "PHB"
+        },
+        "r_high_elf": {
+            "title": "HIGH ELF",
+            "desc": "Elf subrace"
+        },
+        "r_wood_elf": {
+            "title": "WOOD ELF",
+            "desc": "Elf Subrace"
+        },
+        "r_hill_dwarf": {
+            "title": "HILL DWARF",
+            "desc": "Dwarf Subrace"
+        },
+        "r_mountain_dwarf": {
+            "title": "MOUNTAIN DWARF",
+            "desc": "Dwarf Subrace"
+        },
+        "r_duegar": {
+            "title": "DUEGAR",
+            "desc": "Dwarf Subrace"
+        },
+
+        "r_half_elf": {
+            "title": "HALF-ELF",
+            "desc": "PHB"
+        },
+        "r_sea_elf": {
+            "title": "SEA ELF",
+            "desc": "Elf Subrace"
+        },
+        "r_eladrin": {
+            "title": "ELADRIN",
+            "desc": "Elf Subrace"
+        },
+        "r_drow": {
+            "title": "DROW",
+            "desc": "Elf Subrace"
+        },
+        "r_shadar_kai": {
+            "title": "SHADAR-KAI",
+            "desc": "Elf Subrace"
+        },
+
+        "r_dragonborn": {
+            "title": "DRAGONBORN",
+            "desc": "PHB"
+        },
+        "r_get_out": {
+            "title": "GOT TIRED OF YOU",
+            "desc": "Ugh, just get out"
+        },
+        "r_centaur": {
+            "title": "CENTAUR",
+            "desc": "GGtR"
+        },
+        "r_kobold": {
+            "title": "KOBOLD",
+            "desc": "Volos"
+        },
+        "r_goblin": {
+            "title": "GOBLIN",
+            "desc": "Volos"
+        },
+        "r_aarakocra": {
+            "title": "AARAKOCRA",
+            "desc": "Elemental Evil"
+        },
+        "r_kenku": {
+            "title": "KENKU",
+            "desc": "Volos"
+        },
+        "r_tabaxi": {
+            "title": "TABAXI",
+            "desc": "Volos"
+        },
+        "r_minotaur": {
+            "title": "MINOTAUR",
+            "desc": "GGtR"
+        },
+        "r_loxadon": {
+            "title": "LOXADON",
+            "desc": "GGtR"
+        },
+        "r_shifter": {
+            "title": "SHIFTER",
+            "desc": "Eberron"
+        },
+        "r_half_orc": {
+            "title": "HALF-ORC",
+            "desc": "PHB"
+        },
+        "r_tiefling": {
+            "title": "TIEFLING",
+            "desc": "PHB"
+        },
+        "r_lizardfolk": {
+            "title": "LIZARDFOLK",
+            "desc": "Volos"
+        },
+        "r_yuan_ti": {
+            "title": "YUAN-TI",
+            "desc": "Volos"
+        },
+        "r_orc": {
+            "title": "ORC",
+            "desc": "Volos"
+        },
+        "r_bugbear": {
+            "title": "BUGBEAR",
+            "desc": "Volos"
+        },
+        "r_hobgoblin": {
+            "title": "HOBGOBLIN",
+            "desc": "Volos"
+        },
+        "r_genasi": {
+            "title": "GENASI",
+            "desc": "Elemental Evil"
+        },
+        "r_fire_genasi": {
+            "title": "FIRE GENASI",
+            "desc": "Genasi Subrace"
+        },
+        "r_earth_genasi": {
+            "title": "EARTH GENASI",
+            "desc": "Genasi Subrace"
+        },
+        "r_air_genasi": {
+            "title": "AIR GENASI",
+            "desc": "Genasi Subrace"
+        },
+        "r_water_genasi": {
+            "title": "WATER GENASI",
+            "desc": "Genasi Subrace"
+        },
+        "r_gith": {
+            "title": "GITH",
+            "desc": "MtoF"
+        },
+        "r_githyanki": {
+            "title": "GITHYANKI",
+            "desc": "Gith Subrace"
+        },
+        "r_githzerai": {
+            "title": "GITHZERAI",
+            "desc": "Gith Subrace"
+        },
+        "r_vedalken": {
+            "title": "VEDALKEN",
+            "desc": "GGtR"
+        },
+        "r_simic_hybrid": {
+            "title": "SIMIC HYBRID",
+            "desc": "GGtR"
+        },
+        "r_kalashtar": {
+            "title": "KALASHTAR",
+            "desc": "Eberron"
+        },
+        "r_banned": {
+            "title": "BANNED",
+            "desc": "Neither do I. Also I'm banning you from my game."
+        },
+        "r_changelings": {
+            "title": "CHANGELINGS",
+            "desc": "Eberron"
+        },
+        "r_warforged": {
+            "title": "WARFORGED",
+            "desc": "Eberron"
+        },
+        "r_triton": {
+            "title": "TRITON",
+            "desc": "Volos"
+        },
+        "r_aasimar": {
+            "title": "AASIMAR",
+            "desc": "Volos"
+        },
+        "r_scourge": {
+            "title": "SCOURGE",
+            "desc": "Aasimar Subrace"
+        },
+        "r_protector": {
+            "title": "PROTECTOR",
+            "desc": "Aasimar Subrace"
+        }
+    }
+}
