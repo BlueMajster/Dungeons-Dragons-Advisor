@@ -9,11 +9,9 @@
     (multislot options)
 )
 
-;;; --- PYTANIE STARTOWE ---
 (defrule ask-game
     (not (user-answer (question-id q_game)))
     =>
-    ;; Używamy krótkich symboli zamiast całych zdań!
     (assert (ui-request (type question) (id q_game) (options opt_adventure opt_lotr opt_snowflake opt_rpg_thing)))
 )
 (defrule ask-nodnd
@@ -25,11 +23,8 @@
 (defrule res-vampire
     (user-answer (question-id q_nodnd) (value opt_vampire))
     =>
-    (assert (ui-request (type result) (id r_vampire) (options reset))) ;;KONIEC
+    (assert (ui-request (type result) (id r_vampire) (options reset)))
 )
-
-;;; Jeśli cokolwiek innego (adventure, lotr, snowflake) -> Idziemy do Human
-;;; Używamy 'or' żeby złapać wszystkie opcje "na tak"
                                                     ;;;(value opt_adventure | opt_lotr | opt_snowflake))
 (defrule ask-hero
     (user-answer (question-id q_game) (value opt_adventure))
