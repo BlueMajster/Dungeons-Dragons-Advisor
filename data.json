@@ -61,7 +61,9 @@
         "q_triton_choice": "Triton?",
         "q_genasi_choice": "Genasi?",
         "q_gith_choice": "Gith?",
-        "q_kalashtar_choice": "Kalashtar?"
+        "q_kalashtar_choice": "Kalashtar?",
+
+        "q_edgelord": "Cool, we actually have those if you picked that path earlier you edgelord"
     },
     "answers": {
         "yes": "Yes",
@@ -189,7 +191,10 @@
         "opt_bad_angel": "Oh I wanna be an angel but not like goody two shoes, A BAD ANGEL",
         "opt_lord": "And you will know My name is the Lord when I lay My vengeance upon thee",
         "opt_light": "You know, light, goodness, yadda yadda",
-        "opt_elfy": "Wait, can I do this but more Elf-y?"
+        "opt_elfy": "Wait, can I do this but more Elf-y?",
+
+        "opt_mean_dwarf": "I'm strong but instead of cheery dwarfness you got mean dwarfness",
+        "opt_dark_elf": "I'm quick and lithe, like and elf but DARK"
     },
     "results": {
         "r_vampire": {
@@ -406,7 +411,7 @@
         },
         "r_banned": {
             "title": "BANNED",
-            "desc": "Neither do I. Also I'm banning you from my game."
+            "desc": "Yeah sure, I'm banning you from my game."
         },
         "r_changelings": {
             "title": "CHANGELINGS",

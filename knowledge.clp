@@ -31,7 +31,7 @@
 ;;; Jeśli cokolwiek innego (adventure, lotr, snowflake) -> Idziemy do Human
 ;;; Używamy 'or' żeby złapać wszystkie opcje "na tak"
                                                     ;;;(value opt_adventure | opt_lotr | opt_snowflake))
-(defrule ask-special2
+(defrule ask-hero
     (user-answer (question-id q_game) (value opt_adventure))
     =>
     (assert (ui-request (type question) (id q_hero) (options opt_serious opt_elf)))
@@ -242,7 +242,9 @@
 )
 
 (defrule res_duegar
-    (user-answer (question-id q_hills) (value opt_asshole))
+    (or (user-answer (question-id q_edgelord) (value opt_mean_dwarf))
+        (user-answer (question-id q_hills) (value opt_asshole))
+    )
     =>
     (assert (ui-request (type result) (id r_duegar) (options reset)))
 )
@@ -254,7 +256,9 @@
 )
 
 (defrule res_sea_elf
-    (user-answer (question-id q_problem) (value opt_merm))
+    (or (user-answer (question-id q_triton_choice) (value opt_elfy))
+        (user-answer (question-id q_problem) (value opt_merm))
+    )
     =>
     (assert (ui-request (type result) (id r_sea_elf) (options reset)))
 )
@@ -268,7 +272,9 @@
 )
 
 (defrule reach_drow
-    (user-answer (question-id q_problem) (value opt_dark_brood))
+    (or (user-answer (question-id q_edgelord) (value opt_dark_elf))
+        (user-answer (question-id q_problem) (value opt_dark_brood))
+    )
     (not (user-answer (question-id q_drow_choice)))
     =>
     (assert (ui-request (type question) (id q_drow_choice) (options yes opt_brooding)))
@@ -287,7 +293,9 @@
 )
 
 (defrule reach_human
-    (user-answer (question-id q_hero) (value opt_serious))
+    (or (user-answer (question-id q_hero) (value opt_serious))
+        (user-answer (question-id q_dark) (value opt_right))
+    )
     (not (user-answer (question-id q_human_choice)))
     =>
     (assert (ui-request (type question) (id q_human_choice) (options yes opt_wait)))
@@ -306,7 +314,11 @@
 )
 
 (defrule res_half_orc
-    (user-answer (question-id q_monster_pretty) (value opt_monster_blood))
+    (or (user-answer (question-id q_misunderstood) (value opt_parent))
+        (user-answer (question-id q_monster_pretty) (value opt_monster_blood))
+        (user-answer (question-id q_orc_choice) (value opt_stoopid))
+        (user-answer (question-id q_allway) (value opt_touch))
+    )
     =>
     (assert (ui-request (type result) (id r_half_orc) (options reset)))
 )
@@ -324,7 +336,7 @@
 (defrule ask-dark
     (user-answer (question-id q_special) (value opt_dark))
     =>
-    (assert (ui-request (type question) (id q_dark) (options opt_darkness)))
+    (assert (ui-request (type question) (id q_dark) (options opt_darkness opt_right)))
 )
 
 (defrule ask-dragon
@@ -346,15 +358,20 @@
 )
 
 (defrule ask-furry
-    (user-answer (question-id q_animal_person) (value opt_furry))
+    (or (user-answer (question-id q_uncommon) (value opt_animal))
+        (user-answer (question-id q_animal_person) (value opt_furry))
+    )
     =>
     (assert (ui-request (type question) (id q_furry) (options opt_scalie opt_owo opt_bird opt_horse_thing)))
 )
 
 (defrule reach-dragonborn
-    (user-answer (question-id q_dragonborn) (value opt_yay))
-    (not (user-answer (question-id q_dragonborn_choice)))
-        =>
+    (and(or (user-answer (question-id q_dragonborn) (value opt_yay))
+        (user-answer (question-id q_scales) (value opt_mf_dragon))
+        (user-answer (question-id q_scales_kind) (value opt_mf_dragon))
+    )
+    (not (user-answer (question-id q_dragonborn_choice))))
+    =>
     (assert (ui-request (type question) (id q_dragonborn_choice) (options yes opt_kid_sized opt_not_dragon)))
 )
 
@@ -448,7 +465,7 @@
 (defrule ask-edgelord
     (user-answer (question-id q_misunderstood) (value opt_poncy))
     =>
-    (assert (ui-request (type question) (id q_edgelord) (options opt_mean_dwarf opt_dark_elf opt_fallen)))
+    (assert (ui-request (type question) (id q_edgelord) (options opt_mean_dwarf opt_dark_elf)))
 )
 
 (defrule res-halforc
@@ -464,7 +481,9 @@
 )
 
 (defrule ask-scales-kind
-    (user-answer (question-id q_misunderstood) (value opt_lizard))
+    (or (user-answer (question-id q_furry) (value opt_scalie))
+        (user-answer (question-id q_misunderstood) (value opt_lizard))
+    )
     =>
     (assert (ui-request (type question) (id q_scales_kind) (options opt_reptile opt_snek opt_mf_dragon)))
 )
@@ -476,7 +495,9 @@
 )
 
 (defrule ask-scales
-    (user-answer (question-id q_comic) (value opt_slaughter))
+    (or (user-answer (question-id q_silly) (value opt_dark_humor))
+        (user-answer (question-id q_comic) (value opt_slaughter))
+    )
     =>
     (assert (ui-request (type question) (id q_scales) (options yes no)))
 )
@@ -496,12 +517,15 @@
 )
 
 (defrule res-goblin
-    (user-answer (question-id q_scales) (value no))
+    (or (user-answer (question-id q_small) (value yes))
+        (user-answer (question-id q_scales) (value no))
+    )
     =>
     (assert (ui-request (type result) (id r_goblin) (options reset)))
 )
+
 (defrule res-lizardfolk
-    (user-answer (question-id q_scales-kind) (value opt_reptile))
+    (user-answer (question-id q_scales_kind) (value opt_reptile))
     =>
     (assert (ui-request (type result) (id r_lizardfolk) (options reset)))
 )
@@ -520,10 +544,29 @@
     (assert (ui-request (type question) (id q_surprise) (options opt_head_on opt_ambush)))
 )
 
+(defrule ask-conquer
+    (user-answer (question-id q_power) (value opt_power_intellect))
+    =>
+    (assert (ui-request (type question) (id q_conquer) (options opt_deception opt_mind)))
+)
+
+(defrule ask-allway
+    (user-answer (question-id q_uncommon) (value opt_classy_monster))
+    =>
+    (assert (ui-request (type question) (id q_allway) (options opt_touch opt_full_monster)))
+)
+
+(defrule ask-small
+    (user-answer (question-id q_allway) (value opt_full_monster))
+    =>
+    (assert (ui-request (type question) (id q_small) (options yes no)))
+)
+
 (defrule reach-orc
     (or (user-answer (question-id q_surprise) (value opt_head_on))
-        (user-answer (question-id q_small) (value yes))
+        (user-answer (question-id q_small) (value no))
     )
+    (not (user-answer (question-id q_orc_choice)))
     =>
     (assert (ui-request (type question) (id q_orc_choice) (options yes opt_stoopid)))
 )
@@ -545,7 +588,7 @@
         (user-answer (question-id q_less_classic) (value opt_move))
     )
     =>
-    (assert (ui-request (type question) (id q_uncommon) (options opt_god opt_aquaman opt_robot opt_doppel)))
+    (assert (ui-request (type question) (id q_uncommon) (options opt_god opt_aquaman opt_robot opt_doppel opt_classy_monster opt_animal)))
     
 )
 
@@ -561,8 +604,15 @@
     (assert (ui-request (type result) (id r_warforged) (options reset)))
 )
 
-(defrule res-triton
+(defrule reach-triton
     (user-answer (question-id q_uncommon) (value opt_aquaman))
+    (not (user-answer (question-id q_triton_choice)))
+    =>
+    (assert (ui-request (type question) (id q_triton_choice) (options yes opt_elfy)))
+)
+
+(defrule res-triton
+    (user-answer (question-id q_triton_choice) (value yes))
     =>
     (assert (ui-request (type result) (id r_triton) (options reset)))
 )
@@ -577,4 +627,16 @@
     (user-answer (question-id q_weird) (value opt_f_you))
     =>
     (assert (ui-request (type result) (id r_banned) (options reset)))
+)
+
+(defrule res-bugbear
+    (user-answer (question-id q_surprise) (value opt_ambush))
+    =>
+    (assert (ui-request (type result) (id r_bugbear) (options reset)))
+)
+
+(defrule res-hobgoblin
+    (user-answer (question-id q_conquer) (value opt_mind))
+    =>
+    (assert (ui-request (type result) (id r_hobgoblin) (options reset)))
 )

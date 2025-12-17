@@ -1,7 +1,7 @@
-import clips
 import tkinter as tk
 from tkinter import messagebox
 import json
+import clips
 import os
 
 CLIPS_FILE = "knowledge.clp"
@@ -72,11 +72,10 @@ class RaceAdvisorApp:
             self.env.load(CLIPS_FILE)
             self.env.reset()
         except Exception as e:
-            messagebox.showerror("Błąd CLIPS", f"Nie można załadować reguł: {e}")
+            messagebox.showerror("Błąd CLIPS", f"Can't load rules: {e}")
             self.root.destroy()
 
     def run_inference(self):
-        """Główna pętla sterująca."""
         self.env.run()
         
         # żądania UI (ui-request)
@@ -93,7 +92,6 @@ class RaceAdvisorApp:
             self.clear_buttons()
 
     def update_interface(self, fact):
-        """Tłumaczy fakt CLIPS na wygląd okna."""
         req_type = str(fact['type'])
         req_id = str(fact['id'])
         options = fact['options']
@@ -101,7 +99,7 @@ class RaceAdvisorApp:
         self.clear_buttons()
 
         if req_type == 'question':
-            self.history_frame.pack_forget() # Ukryj pole historii
+            self.history_frame.pack_forget() # Ukryj historie
             
             text = self.data['questions'].get(req_id, f"MISSING: {req_id}")
             self.lbl_question.config(text=text, fg="black")
@@ -115,23 +113,22 @@ class RaceAdvisorApp:
                 val = str(opt)
                 btn_label = self.data.get('answers', {}).get(val, val.replace("_", " "))
                 
-                # Kolory
                 btn_col = "#2196F3"
                 if val == 'yes': btn_col = "#4CAF50"
                 elif val == 'no': btn_col = "#f44336"
                 
                 btn = tk.Button(self.buttons_frame, text=btn_label, font=("Arial", 11),
                                 bg=btn_col, fg="white", 
-                                wraplength=180,
-                                height=4,
+                                wraplength=300,
+                                height=3,
                                 width=25,
                                 command=lambda v=val: self.submit_answer(req_id, v))
                 btn.pack(side=side_pack, padx=10, pady=5, fill=fill_opt)
 
         elif req_type == 'result':
-            # Dane wyniku
+
             res = self.data['results'].get(req_id, {"title": req_id, "desc": ""})
-            self.lbl_question.config(text=f"YOUR RESULT: {res['title']}", fg="#2E7D32")
+            self.lbl_question.config(text=f"TWÓJ WYNIK: {res['title']}", fg="#2E7D32")
             self.lbl_desc.config(text=res['desc'])
             
             history_text = self.get_reasoning_history()
@@ -141,10 +138,9 @@ class RaceAdvisorApp:
             self.txt_history.insert(tk.END, history_text)
             self.txt_history.config(state=tk.DISABLED)
             
-            # ramka historii
             self.history_frame.pack(fill=tk.BOTH, pady=10)
             
-            # Przycisk Reset
+            # Reset
             if 'reset' in [str(o) for o in options]:
                 btn = tk.Button(self.buttons_frame, text="START AGAIN", 
                                 font=("Arial", 12), bg="#607D8B", fg="white",
@@ -155,7 +151,6 @@ class RaceAdvisorApp:
         """Pobiera fakty user-answer z pamięci CLIPS i tłumaczy je na tekst."""
         history = ""
         
-        # Pobieramy wszystkie fakty
         facts = list(self.env.facts())
         
         user_answers = [f for f in facts if f.template.name == 'user-answer']
@@ -165,10 +160,11 @@ class RaceAdvisorApp:
             q_id = str(ans['question-id'])
             val = str(ans['value'])
             
+            # ID na tekst z JSON
             q_text = self.data['questions'].get(q_id, q_id)
             a_text = self.data.get('answers', {}).get(val, val)
             
-            history += f"{step}. {q_text}\n   -> ANSWER: {a_text}\n"
+            history += f"{step}. {q_text}\n   -> Result: {a_text}\n"
             step += 1
             
         return history
